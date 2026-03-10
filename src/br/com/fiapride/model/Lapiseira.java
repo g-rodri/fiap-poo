@@ -29,6 +29,14 @@ public Lapiseira() {
  }
  
  public void borrachaStatus(boolean ativarBorracha) {
-	 
- }
+	 // atualiza o status da borracha
+    this.ativarBorracha = ativarBorracha;
+    
+    // verifica se está ativa ou não
+    if (this.ativarBorracha) {
+        System.out.println("A borracha da lapiseira está ATIVA.");
+    } else {
+        System.out.println("A borracha da lapiseira está INATIVA.");
+	}
+}
 }
