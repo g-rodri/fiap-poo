@@ -1,12 +1,14 @@
 package br.com.fiapride.main;
 
-import br.com.fiapride.model.Cartao;
+import br.com.fiapride.model.Veiculo;
 // Importamos a classe Passageiro para que o sistema a reconheça
 import br.com.fiapride.model.Passageiro;
 
 public class SistemaPrincipal {
 
 	public static void main(String[] args) {
+		
+		Veiculo meuCarro = new Veiculo("ABC-1234", "Toyota Corolla");
         
         System.out.println("--- Iniciando o Sistema FiapRide --- \n");
         
