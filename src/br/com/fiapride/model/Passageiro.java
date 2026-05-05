@@ -1,11 +1,10 @@
-
 // A Classe define a estrutura. Ela não é o passageiro real, é apenas o modelo.
 public class Passageiro {
     private String nome;
     private String cpf;
     private double saldo;
 
-    public void Passageiro(String nome, String cpf) {
+    public Passageiro(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf; // Novo Atributo
         this.saldo = 0.00;
@@ -54,16 +53,15 @@ public class Passageiro {
     }
 
     public void pagarViagem(double valor) {
-        // Regra de negócio: O custo deve ser positivo e o saldo deve ser suficiente
-        if (custo <= 0) {
-            System.out.println("Erro: O custo da viagem é inválido.");
-            return;
-        }
-        if (this.saldo < custo) {
-            System.out.println("Erro: Saldo insuficiente para realizar a viagem.");
-            return;
-        }
-        this.saldo -= custo;
-        System.out.println("Viagem paga. Saldo restante: " + this.saldo);
+    if (valor <= 0) {
+        System.out.println("Erro: O custo da viagem é inválido.");
+        return;
+    }
+    if (this.saldo < valor) {
+        System.out.println("Erro: Saldo insuficiente para realizar a viagem.");
+        return;
+    }
+    this.saldo -= valor;
+    System.out.println("Viagem paga. Saldo restante: " + this.saldo);
     }
 }
